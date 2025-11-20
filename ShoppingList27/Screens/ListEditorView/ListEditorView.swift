@@ -16,7 +16,7 @@ struct ListEditorView: View {
 	// MARK: Private Properties
 
 	@Environment(\.modelContext) private var modelContext
-	@Environment(NavigationRoute.self) private var router
+	@Environment(NavigationRouter.self) private var router
 
 	@State private var text: String
 	@State private var selectedColor: Color?
@@ -161,6 +161,6 @@ private extension ListEditorView {
 #Preview {
 	NavigationStack {
 		ListEditorView(shoppingList: nil, registeredTitles: ["123"])
-			.environment(NavigationRoute())
+			.environment(NavigationRouter())
 	}
 }

@@ -1,5 +1,5 @@
 //
-//  NavigationRoute.swift
+//  NavigationRouter.swift
 //  ShoppingList27
 //
 //  Created by Алина on 16.09.2025.
@@ -9,7 +9,7 @@ import SwiftUI
 
 @MainActor
 @Observable
-final class NavigationRoute {
+final class NavigationRouter {
 	enum Route: Hashable, Identifiable {
 		case welcome
 		case listMain

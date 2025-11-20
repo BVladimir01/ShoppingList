@@ -12,7 +12,7 @@ import SwiftData
 
 struct ProductListView: View {
 
-	@Environment(NavigationRoute.self) private var router
+	@Environment(NavigationRouter.self) private var router
 	@Environment(\.modelContext) private var modelContext
 
 	@State var viewModel: ProductListViewModelProtocol

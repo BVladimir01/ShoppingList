@@ -13,7 +13,7 @@ struct ProductEditorView: View {
 
 	// MARK: Private Properties
 
-	@Environment(NavigationRoute.self) private var router
+	@Environment(NavigationRouter.self) private var router
 	@Environment(\.modelContext) private var modelContext
 
 	@State private var productName: String = ""

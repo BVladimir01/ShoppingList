@@ -19,7 +19,7 @@ import SwiftData
 
 	// MARK: Public Properties
 
-	var router: NavigationRoute?
+	var router: NavigationRouter?
 	var modelContext: ModelContext?
 
 	var searchedProductName: String = ""
@@ -43,7 +43,7 @@ import SwiftData
 
 extension ProductListViewModel {
 
-	func setRouter(_ router: NavigationRoute?) {
+	func setRouter(_ router: NavigationRouter?) {
 		self.router = router
 	}
 
@@ -93,7 +93,7 @@ protocol ProductListViewModelProtocol {
 	func addProduct()
 	func deleteProduct(_ product: Product)
 	func editProduct(_ product: Product)
-	func setRouter(_ router: NavigationRoute?)
+	func setRouter(_ router: NavigationRouter?)
 	func hideView()
 	func setModelContext(_ modelContext: ModelContext)
 	func toggleProductIsBought(_ product: Product)
@@ -106,7 +106,7 @@ protocol ProductListViewModelProtocol {
 
 	let listName: String
 	var products: [Product]
-	var router: NavigationRoute?
+	var router: NavigationRouter?
 
 	var searchedProductName: String = ""
 
@@ -115,7 +115,7 @@ protocol ProductListViewModelProtocol {
 	init(
 		listName: String,
 		products: [Product]? = nil,
-		router: NavigationRoute? = nil
+		router: NavigationRouter? = nil
 	) {
 		self.listName = listName
 		self.products = products ?? []
@@ -143,7 +143,7 @@ extension ProductListViewModelMock {
 		print("Selected to edit product: \(product.name)")
 	}
 
-	func setRouter(_ router: NavigationRoute?) {
+	func setRouter(_ router: NavigationRouter?) {
 
 	}
 

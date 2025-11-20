@@ -18,7 +18,7 @@ struct ShoppingList27App: App {
 
 	var body: some Scene {
 		WindowGroup {
-			RouteView(hasCompletedOnboarding: $hasCompleteOnboarding)
+			RootView(hasCompletedOnboarding: $hasCompleteOnboarding)
 				.preferredColorScheme(
 					selectedThemeType == .system
 					? nil

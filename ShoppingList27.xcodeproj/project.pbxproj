@@ -14,7 +14,7 @@
 		CEE2980B2E71C7AF00A522AE /* Exceptions for "ShoppingList27" folder in "ShoppingList27" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = 11A259BC2E65BBA500507933 /* ShoppingList27 */;
 		};

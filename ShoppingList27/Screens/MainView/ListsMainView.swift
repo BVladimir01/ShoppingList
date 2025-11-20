@@ -21,7 +21,7 @@ struct ListsMainView: View {
 	@AppStorage("ThemeType") private var selectedThemeType: ThemeType = .system
 
 	@Environment(\.colorScheme) private var colorScheme
-	@Environment(NavigationRoute.self) private var router
+	@Environment(NavigationRouter.self) private var router
 	@Environment(\.modelContext) private var context
 
 	// MARK: Body
@@ -213,7 +213,7 @@ private extension ListsMainView {
 // MARK: - Preview - Data
 
 #Preview("Data") {
-	let router = NavigationRoute()
+	let router = NavigationRouter()
 	let viewModel = ListsMainViewModel()
 	ListsMainView(viewModel: viewModel)
 		.environment(router)

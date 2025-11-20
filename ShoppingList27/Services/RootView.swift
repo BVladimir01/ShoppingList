@@ -1,5 +1,5 @@
 //
-//  RouteView.swift
+//  RootView.swift
 //  ShoppingList27
 //
 //  Created by Алина on 16.09.2025.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct RouteView: View {
+struct RootView: View {
 
-	@State private var router = NavigationRoute()
+	@State private var router = NavigationRouter()
 	@State private var isEditing = false
 	@State private var isCreatingNewList = false
 	@Binding var hasCompletedOnboarding: Bool
 
 	init(hasCompletedOnboarding: Binding<Bool>) {
 		_hasCompletedOnboarding = hasCompletedOnboarding
-		let initialRouter = NavigationRoute()
+		let initialRouter = NavigationRouter()
 		initialRouter.root = hasCompletedOnboarding.wrappedValue ? .listMain : .welcome
 		_router = State(initialValue: initialRouter)
 	}
@@ -24,7 +24,7 @@ struct RouteView: View {
 	var body: some View {
 		NavigationStack(path: $router.navigationPath) {
 			getScreen(for: router.root)
-				.navigationDestination(for: NavigationRoute.Route.self) { route in
+				.navigationDestination(for: NavigationRouter.Route.self) { route in
 					getScreen(for: route)
 				}
 		}
@@ -44,7 +44,7 @@ struct RouteView: View {
 	}
 
 	@ViewBuilder
-	private func getScreen(for route: NavigationRoute.Route) -> some View {
+	private func getScreen(for route: NavigationRouter.Route) -> some View {
 		switch route {
 		case .welcome:
 				WelcomeScreenView(hasCompletedOnboarding: $hasCompletedOnboarding)
