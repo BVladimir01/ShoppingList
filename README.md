@@ -16,7 +16,7 @@ An app for listing your purchases and tracking them
 
 ## Installation
 ```bash
-git clone https://github.com/BVladimir01/ShoppingList
+git clone https://github.com/BVladimir01/ShoppingList.git
 cd ShoppingList
 open ShoppingList27.xcodeproj
 ```
