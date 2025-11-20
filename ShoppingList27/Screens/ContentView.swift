@@ -10,24 +10,24 @@ import SwiftUI
 // MARK: - ContentView
 
 struct ContentView: View {
-    var body: some View {
-      
-        HStack {
-            Image("snowflake")
-                .renderingMode(.template)
-                .foregroundColor(.addGreen)
-            Text("Hello, Factory!")
-        }
-        .padding()
-    }
+	var body: some View {
+
+		HStack {
+			Image("snowflake")
+				.renderingMode(.template)
+				.foregroundColor(.addGreen)
+			Text("Hello, Factory!")
+		}
+		.padding()
+	}
 }
 
 // MARK: - Preview
 
 #Preview {
-    Color.blue
-         .ignoresSafeArea()
-         .overlay(
-    ContentView()
-    )
+	Color.blue
+		 .ignoresSafeArea()
+		 .overlay(
+	ContentView()
+	)
 }

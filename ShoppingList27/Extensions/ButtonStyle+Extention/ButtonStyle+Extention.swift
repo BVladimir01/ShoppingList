@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension ButtonStyle where Self == CheckboxStyle {
-    static func checkbox(isChecked: Bool) -> CheckboxStyle {
-        CheckboxStyle(isChecked: isChecked)
-    }
+	static func checkbox(isChecked: Bool) -> CheckboxStyle {
+		CheckboxStyle(isChecked: isChecked)
+	}
 }
